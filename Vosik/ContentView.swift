@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var activityName: String = "Running"
+    
+    // @State private var activityName: String = "Running"
+    
+    // This is used because you want to add multiple entries
+    @State private var activityNames: [String] = ["Activity 1"]
     
     var body: some View {
         ZStack {
@@ -37,23 +41,69 @@ struct ContentView: View {
                     }
                 }
                 .padding(.bottom, 20)
+                List {
+                    ForEach(activityNames.indices, id: \.self) { index in
+                        ActivityEntry(activityName: $activityNames[index], onEdit: {
+                            print("Edit for \(activityNames[index])")
+                        })
+                        .listRowBackground(Color.clear)
+                    }
+                    .onDelete(perform: deleteActivity)
+                }
+                .listStyle(PlainListStyle())
+                .background(Color.clear)
                 
-                ActivityEntry(activityName: $activityName, onEdit: {print("hi")})
                 Spacer()
                 
-                Button(action: {
-                    print("Start Pressed")
-                }) {
-                    Text("START!")
+                HStack {
+                    
+                    // Invisible Button for Layout Balancing
+                    Button(action: {}) {
+                        VStack {
+                            Text("Entry")
+                            Text(" ")
+                        }
+                        .foregroundColor(.clear)
+                        .padding()
+                    }
+                    .background(Color.clear)
+                    .cornerRadius(50)
+                    .hidden()
+                                        
+                    Spacer()
+                    
+                    Button(action: {
+                        print("Start Pressed")
+                    }) {
+                        Text("START!")
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .padding()
+                            .background(Color(red: 240 / 155, green: 162 / 255, blue: 2 / 255))
+                            .cornerRadius(50)
+                            .padding()
+                    }
+                    Spacer()
+                    
+                    Button(action: {
+                        activityNames.append("Activity \(activityNames.count + 1)")
+                    }) {
+                        VStack {
+                            Text("Add")
+                            Text("Entry")
+                        }
                         .foregroundColor(.white)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .padding()
-                        .background(Color(red: 240 / 155, green: 162 / 255, blue: 2 / 255))
-                        .cornerRadius(50)
-                        .padding()
+                        .bold()
+                    }
+                    .background(Color.gray)
+                    .cornerRadius(50)
                 }
             }
         }
+    }
+    func deleteActivity(at offsets: IndexSet) {
+        activityNames.remove(atOffsets: offsets)
     }
 }
 

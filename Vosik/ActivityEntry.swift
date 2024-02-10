@@ -25,31 +25,32 @@ struct ActivityEntry: View {
     
     var body: some View {
         HStack {
-            if isEditing {
-                TextField("Activity Name", text: $editableName, onCommit: {
-                    activityName = editableName // Update front-facing name
-                    isEditing = false
-                })
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 30)
-                .padding(.vertical, 10)
-                .font(.title)
-                .background(Color.black.opacity(0.7))
-                .cornerRadius(5)
-                .font(.title)
-            } else {
-                Text(activityName)
-                    .padding()
-                    .font(.title)
+            ZStack {
+                if isEditing {
+                    TextField("Activity Name", text: $editableName, onCommit: {
+                        activityName = editableName // Update front-facing name
+                        isEditing = false
+                    })
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal, 30)
                     .padding(.vertical, 10)
-                    .foregroundColor(.white)
-                    .onTapGesture {
-                        self.editableName = self.activityName
-                        self.isEditing = true
-                    }
+                    .font(.title)
+                    .background(Color.black.opacity(0.7))
+                    .cornerRadius(5)
+                    .font(.title)
+                } else {
+                    Text(activityName)
+                        .padding()
+                        .font(.title)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 10)
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            self.editableName = self.activityName
+                            self.isEditing = true
+                        }
+                }
             }
-            
             // edit button
             Button(action: onEdit) {
                 Image(systemName: "pencil") // Edit icon
@@ -61,8 +62,9 @@ struct ActivityEntry: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 30)
         }
-        .background(Color.black.opacity(0.8)) // Optional: Adjust HStack background as needed
-        .cornerRadius(15) // Optional: Adjust corner radius for the whole component
+        .frame(maxWidth: 350, minHeight: 70, maxHeight: 70)
+        .background(Color.black.opacity(0.8))
+        .cornerRadius(15)
     }
 }
 
