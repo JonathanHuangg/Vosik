@@ -14,6 +14,7 @@
 		ABB36F122B77D43B00139387 /* VosikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F112B77D43B00139387 /* VosikTests.swift */; };
 		ABB36F1C2B77D43B00139387 /* VosikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F1B2B77D43B00139387 /* VosikUITests.swift */; };
 		ABB36F1E2B77D43B00139387 /* VosikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */; };
+		ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F2C2B77DFB200139387 /* ActivityEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		ABB36F172B77D43B00139387 /* VosikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VosikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB36F1B2B77D43B00139387 /* VosikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikUITests.swift; sourceTree = "<group>"; };
 		ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABB36F2C2B77DFB200139387 /* ActivityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				ABB36F022B77D43A00139387 /* ContentView.swift */,
 				ABB36F042B77D43B00139387 /* Assets.xcassets */,
 				ABB36F062B77D43B00139387 /* Preview Content */,
+				ABB36F2C2B77DFB200139387 /* ActivityEntry.swift */,
 			);
 			path = Vosik;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
 				ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */,
+				ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
