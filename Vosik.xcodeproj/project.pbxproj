@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F002B77D43A00139387 /* VosikApp.swift */; };
+		ABB36F032B77D43A00139387 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F022B77D43A00139387 /* ContentView.swift */; };
+		ABB36F052B77D43B00139387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F042B77D43B00139387 /* Assets.xcassets */; };
+		ABB36F082B77D43B00139387 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F072B77D43B00139387 /* Preview Assets.xcassets */; };
+		ABB36F122B77D43B00139387 /* VosikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F112B77D43B00139387 /* VosikTests.swift */; };
+		ABB36F1C2B77D43B00139387 /* VosikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F1B2B77D43B00139387 /* VosikUITests.swift */; };
+		ABB36F1E2B77D43B00139387 /* VosikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABB36F0E2B77D43B00139387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB36EF52B77D43A00139387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB36EFC2B77D43A00139387;
+			remoteInfo = Vosik;
+		};
+		ABB36F182B77D43B00139387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB36EF52B77D43A00139387 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB36EFC2B77D43A00139387;
+			remoteInfo = Vosik;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABB36EFD2B77D43A00139387 /* Vosik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vosik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB36F002B77D43A00139387 /* VosikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikApp.swift; sourceTree = "<group>"; };
+		ABB36F022B77D43A00139387 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABB36F042B77D43B00139387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABB36F072B77D43B00139387 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABB36F0D2B77D43B00139387 /* VosikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VosikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB36F112B77D43B00139387 /* VosikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikTests.swift; sourceTree = "<group>"; };
+		ABB36F172B77D43B00139387 /* VosikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VosikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB36F1B2B77D43B00139387 /* VosikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikUITests.swift; sourceTree = "<group>"; };
+		ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB36EFA2B77D43A00139387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F0A2B77D43B00139387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F142B77D43B00139387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB36EF42B77D43A00139387 = {
+			isa = PBXGroup;
+			children = (
+				ABB36EFF2B77D43A00139387 /* Vosik */,
+				ABB36F102B77D43B00139387 /* VosikTests */,
+				ABB36F1A2B77D43B00139387 /* VosikUITests */,
+				ABB36EFE2B77D43A00139387 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB36EFE2B77D43A00139387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB36EFD2B77D43A00139387 /* Vosik.app */,
+				ABB36F0D2B77D43B00139387 /* VosikTests.xctest */,
+				ABB36F172B77D43B00139387 /* VosikUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB36EFF2B77D43A00139387 /* Vosik */ = {
+			isa = PBXGroup;
+			children = (
+				ABB36F002B77D43A00139387 /* VosikApp.swift */,
+				ABB36F022B77D43A00139387 /* ContentView.swift */,
+				ABB36F042B77D43B00139387 /* Assets.xcassets */,
+				ABB36F062B77D43B00139387 /* Preview Content */,
+			);
+			path = Vosik;
+			sourceTree = "<group>";
+		};
+		ABB36F062B77D43B00139387 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABB36F072B77D43B00139387 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABB36F102B77D43B00139387 /* VosikTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB36F112B77D43B00139387 /* VosikTests.swift */,
+			);
+			path = VosikTests;
+			sourceTree = "<group>";
+		};
+		ABB36F1A2B77D43B00139387 /* VosikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB36F1B2B77D43B00139387 /* VosikUITests.swift */,
+				ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */,
+			);
+			path = VosikUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB36EFC2B77D43A00139387 /* Vosik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB36F212B77D43B00139387 /* Build configuration list for PBXNativeTarget "Vosik" */;
+			buildPhases = (
+				ABB36EF92B77D43A00139387 /* Sources */,
+				ABB36EFA2B77D43A00139387 /* Frameworks */,
+				ABB36EFB2B77D43A00139387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vosik;
+			productName = Vosik;
+			productReference = ABB36EFD2B77D43A00139387 /* Vosik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABB36F0C2B77D43B00139387 /* VosikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB36F242B77D43B00139387 /* Build configuration list for PBXNativeTarget "VosikTests" */;
+			buildPhases = (
+				ABB36F092B77D43B00139387 /* Sources */,
+				ABB36F0A2B77D43B00139387 /* Frameworks */,
+				ABB36F0B2B77D43B00139387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB36F0F2B77D43B00139387 /* PBXTargetDependency */,
+			);
+			name = VosikTests;
+			productName = VosikTests;
+			productReference = ABB36F0D2B77D43B00139387 /* VosikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABB36F162B77D43B00139387 /* VosikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB36F272B77D43B00139387 /* Build configuration list for PBXNativeTarget "VosikUITests" */;
+			buildPhases = (
+				ABB36F132B77D43B00139387 /* Sources */,
+				ABB36F142B77D43B00139387 /* Frameworks */,
+				ABB36F152B77D43B00139387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB36F192B77D43B00139387 /* PBXTargetDependency */,
+			);
+			name = VosikUITests;
+			productName = VosikUITests;
+			productReference = ABB36F172B77D43B00139387 /* VosikUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB36EF52B77D43A00139387 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					ABB36EFC2B77D43A00139387 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					ABB36F0C2B77D43B00139387 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = ABB36EFC2B77D43A00139387;
+					};
+					ABB36F162B77D43B00139387 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = ABB36EFC2B77D43A00139387;
+					};
+				};
+			};
+			buildConfigurationList = ABB36EF82B77D43A00139387 /* Build configuration list for PBXProject "Vosik" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABB36EF42B77D43A00139387;
+			productRefGroup = ABB36EFE2B77D43A00139387 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABB36EFC2B77D43A00139387 /* Vosik */,
+				ABB36F0C2B77D43B00139387 /* VosikTests */,
+				ABB36F162B77D43B00139387 /* VosikUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABB36EFB2B77D43A00139387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB36F082B77D43B00139387 /* Preview Assets.xcassets in Resources */,
+				ABB36F052B77D43B00139387 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F0B2B77D43B00139387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F152B77D43B00139387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB36EF92B77D43A00139387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
+				ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F092B77D43B00139387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB36F122B77D43B00139387 /* VosikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB36F132B77D43B00139387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB36F1C2B77D43B00139387 /* VosikUITests.swift in Sources */,
+				ABB36F1E2B77D43B00139387 /* VosikUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABB36F0F2B77D43B00139387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB36EFC2B77D43A00139387 /* Vosik */;
+			targetProxy = ABB36F0E2B77D43B00139387 /* PBXContainerItemProxy */;
+		};
+		ABB36F192B77D43B00139387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB36EFC2B77D43A00139387 /* Vosik */;
+			targetProxy = ABB36F182B77D43B00139387 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABB36F1F2B77D43B00139387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABB36F202B77D43B00139387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABB36F222B77D43B00139387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vosik/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.Vosik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABB36F232B77D43B00139387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vosik/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.Vosik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABB36F252B77D43B00139387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.VosikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vosik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vosik";
+			};
+			name = Debug;
+		};
+		ABB36F262B77D43B00139387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.VosikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vosik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vosik";
+			};
+			name = Release;
+		};
+		ABB36F282B77D43B00139387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.VosikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vosik;
+			};
+			name = Debug;
+		};
+		ABB36F292B77D43B00139387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.VosikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vosik;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB36EF82B77D43A00139387 /* Build configuration list for PBXProject "Vosik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB36F1F2B77D43B00139387 /* Debug */,
+				ABB36F202B77D43B00139387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB36F212B77D43B00139387 /* Build configuration list for PBXNativeTarget "Vosik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB36F222B77D43B00139387 /* Debug */,
+				ABB36F232B77D43B00139387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB36F242B77D43B00139387 /* Build configuration list for PBXNativeTarget "VosikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB36F252B77D43B00139387 /* Debug */,
+				ABB36F262B77D43B00139387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB36F272B77D43B00139387 /* Build configuration list for PBXNativeTarget "VosikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB36F282B77D43B00139387 /* Debug */,
+				ABB36F292B77D43B00139387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABB36EF52B77D43A00139387 /* Project object */;
+}
