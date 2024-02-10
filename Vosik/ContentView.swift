@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var activityName: String = "Running"
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [
@@ -16,7 +18,7 @@ struct ContentView: View {
                 Color(red: 5 / 255, green: 5 / 255, blue: 5 / 255), // Back to the base color
                     ]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .edgesIgnoringSafeArea(.all)
-            VStack {
+            VStack() {
                 HStack {
                     Image("Logo")
                         .resizable()
@@ -34,11 +36,23 @@ struct ContentView: View {
                             .padding(.horizontal, 50)
                     }
                 }
+                .padding(.bottom, 20)
+                
+                ActivityEntry(activityName: $activityName, onEdit: {print("hi")})
                 Spacer()
                 
-                ActivityEntry(activityName: "Running")
+                Button(action: {
+                    print("Start Pressed")
+                }) {
+                    Text("START!")
+                        .foregroundColor(.white)
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .padding()
+                        .background(Color(red: 240 / 155, green: 162 / 255, blue: 2 / 255))
+                        .cornerRadius(50)
+                        .padding()
+                }
             }
-            
         }
     }
 }
