@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BA7C7D52B78C61A008FE805 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA7C7D42B78C61A008FE805 /* SpotifyiOS.framework */; };
+		4BA7C7D82B78C779008FE805 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA7C7D72B78C779008FE805 /* Constants.swift */; };
+		4BA7C7DA2B78C7CB008FE805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA7C7D92B78C7CB008FE805 /* ViewController.swift */; };
 		ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F002B77D43A00139387 /* VosikApp.swift */; };
 		ABB36F032B77D43A00139387 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F022B77D43A00139387 /* ContentView.swift */; };
 		ABB36F052B77D43B00139387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F042B77D43B00139387 /* Assets.xcassets */; };
@@ -44,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BA7C7D32B78C3A0008FE805 /* Vosik-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vosik-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BA7C7D42B78C61A008FE805 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = Vosik/SpotifyiOS.framework; sourceTree = "<group>"; };
+		4BA7C7D62B78C6B2008FE805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BA7C7D72B78C779008FE805 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4BA7C7D92B78C7CB008FE805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABB36EFD2B77D43A00139387 /* Vosik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vosik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB36F002B77D43A00139387 /* VosikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikApp.swift; sourceTree = "<group>"; };
 		ABB36F022B77D43A00139387 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA7C7D52B78C61A008FE805 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,8 @@
 		ABB36EF42B77D43A00139387 = {
 			isa = PBXGroup;
 			children = (
+				4BA7C7D32B78C3A0008FE805 /* Vosik-Bridging-Header.h */,
+				4BA7C7D42B78C61A008FE805 /* SpotifyiOS.framework */,
 				ABB36F3D2B7877EE00139387 /* TCP Socket.swift */,
 				ABB36EFF2B77D43A00139387 /* Vosik */,
 				ABB36F102B77D43B00139387 /* VosikTests */,
@@ -115,6 +126,7 @@
 		ABB36EFF2B77D43A00139387 /* Vosik */ = {
 			isa = PBXGroup;
 			children = (
+				4BA7C7D62B78C6B2008FE805 /* Info.plist */,
 				ABB36F342B78659700139387 /* Music MP3 */,
 				ABB36F002B77D43A00139387 /* VosikApp.swift */,
 				ABB36F022B77D43A00139387 /* ContentView.swift */,
@@ -161,6 +173,8 @@
 				ABB36F372B786BFF00139387 /* SO TIRED (Slowed).mp3 */,
 				ABB36F322B78657100139387 /* MusicPlayer.swift */,
 				ABB36F392B786EA000139387 /* PlayerModel.swift */,
+				4BA7C7D72B78C779008FE805 /* Constants.swift */,
+				4BA7C7D92B78C7CB008FE805 /* ViewController.swift */,
 			);
 			path = "Music MP3";
 			sourceTree = "<group>";
@@ -253,6 +267,9 @@
 				Base,
 			);
 			mainGroup = ABB36EF42B77D43A00139387;
+			packageReferences = (
+				4BA7C7D22B78C28F008FE805 /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+			);
 			productRefGroup = ABB36EFE2B77D43A00139387 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA7C7DA2B78C7CB008FE805 /* ViewController.swift in Sources */,
 				ABB36F402B78A68E00139387 /* ActivityData.swift in Sources */,
 				ABB36F2F2B78092C00139387 /* AddEntry.swift in Sources */,
 				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
@@ -306,6 +324,7 @@
 				ABB36F312B78383E00139387 /* EditPage.swift in Sources */,
 				ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */,
 				ABB36F3A2B786EA000139387 /* PlayerModel.swift in Sources */,
+				4BA7C7D82B78C779008FE805 /* Constants.swift in Sources */,
 				ABB36F422B78A70400139387 /* ActivitiesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,8 +489,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Vosik/Preview Content\"";
+				DEVELOPMENT_TEAM = 5V29J456FK;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vosik",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Vosik/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,9 +507,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.Vosik";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vosik-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,8 +525,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Vosik/Preview Content\"";
+				DEVELOPMENT_TEAM = 5V29J456FK;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vosik",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Vosik/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,9 +543,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan-Huang.Vosik";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vosik-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,6 +665,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BA7C7D22B78C28F008FE805 /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = ABB36EF52B77D43A00139387 /* Project object */;
 }
