@@ -1,4 +1,4 @@
-use music;
+use Vosik;
 
 DROP TABLE IF EXISTS songs;
 CREATE TABLE IF NOT EXISTS songs (

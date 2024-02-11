@@ -1,7 +1,8 @@
 import mysql.connector
 
-cnx = mysql.connector.connect(user='hacklytics', 
-    password='mobilize privacy swooned gap blip', host='127.0.0.1', database='music')
+cnx = mysql.connector.connect(
+    user="root", password="edison9138", host="127.0.0.1", database="Vosik"
+)
 
 cursor = cnx.cursor()
 
@@ -11,7 +12,12 @@ data = open("track_data.tsv", "r", encoding="utf-8")
 
 lines = data.readlines()
 
+# i for skipping the attribute row
+i = 0
 for line in lines:
+    if i == 0:
+        i += 1
+        continue
     parts = line.split("\t")
     print(parts[0])
     id = parts[1]
