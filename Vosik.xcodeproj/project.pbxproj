@@ -16,6 +16,7 @@
 		ABB36F1E2B77D43B00139387 /* VosikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */; };
 		ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F2C2B77DFB200139387 /* ActivityEntry.swift */; };
 		ABB36F2F2B78092C00139387 /* AddEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F2E2B78092C00139387 /* AddEntry.swift */; };
+		ABB36F312B78383E00139387 /* EditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F302B78383E00139387 /* EditPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		ABB36F1D2B77D43B00139387 /* VosikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosikUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ABB36F2C2B77DFB200139387 /* ActivityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntry.swift; sourceTree = "<group>"; };
 		ABB36F2E2B78092C00139387 /* AddEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntry.swift; sourceTree = "<group>"; };
+		ABB36F302B78383E00139387 /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				ABB36F002B77D43A00139387 /* VosikApp.swift */,
 				ABB36F022B77D43A00139387 /* ContentView.swift */,
+				ABB36F302B78383E00139387 /* EditPage.swift */,
 				ABB36F2E2B78092C00139387 /* AddEntry.swift */,
 				ABB36F042B77D43B00139387 /* Assets.xcassets */,
 				ABB36F062B77D43B00139387 /* Preview Content */,
@@ -266,6 +269,7 @@
 				ABB36F2F2B78092C00139387 /* AddEntry.swift in Sources */,
 				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
 				ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */,
+				ABB36F312B78383E00139387 /* EditPage.swift in Sources */,
 				ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
