@@ -77,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BF418092B7864F900D70AD4 /* MusicHandling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicHandling;
+			sourceTree = "<group>";
+		};
 		ABB36EF42B77D43A00139387 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +107,7 @@
 		ABB36EFF2B77D43A00139387 /* Vosik */ = {
 			isa = PBXGroup;
 			children = (
+				4BF418092B7864F900D70AD4 /* MusicHandling */,
 				ABB36F002B77D43A00139387 /* VosikApp.swift */,
 				ABB36F022B77D43A00139387 /* ContentView.swift */,
 				ABB36F302B78383E00139387 /* EditPage.swift */,
