@@ -7,29 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {  
+struct ContentView: View {
     
     // @State private var activityName: String = "Running"
+    
     // This is used because you want to add multiple entries
     @State private var activityNames: [String] = ["Activity 1"]
     @State private var isEditing: Bool = false
     @State private var selectedActivityIndex: Int? = nil
     
-    // Track ActivityData
-    @StateObject private var viewModel = ActivitiesViewModel()
-    
-    
-    let connector = MySQLDatabaseConnector(
-        hostname: "36.226.83.161",
-        port: 3306,
-        username: "henry",
-        password: "Aa&10220305",
-        database: "Vosik"
-    )
-
-    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [
                     Color(red: 5 / 255, green: 5 / 255, blue: 5 / 255), // Base dark color
@@ -57,22 +45,21 @@ struct ContentView: View {
                     }
                     .padding(.bottom, 20)
                     List {
-                        ForEach(Array(activityNames.enumerated()), id: \.offset) { index, name in
-                            NavigationLink(destination: EditPage(data: viewModel.dataForActivity(named: name), activityName: name, activityIndex: index)) {
-                                ActivityEntry(activityName: .constant(name), onEdit: {
-                                    print("Edit for \(activityNames[index])")
-                                })
-                            }
-                            .padding()
-                            .listRowInsets(EdgeInsets()) // This will remove the default padding
-                            .listRowBackground(Color.clear) // This will make the background of the row clear
+                        ForEach(activityNames.indices, id: \.self) { index in
+                            ActivityEntry(activityName: $activityNames[index], onEdit: {
+                                print("Edit for \(activityNames[index])")
+                            })
+                            .listRowBackground(Color.clear)
                         }
                         .onDelete(perform: deleteActivity)
                     }
                     .listStyle(PlainListStyle())
                     .background(Color.clear)
-                        
+                    
+                    Spacer()
+                    
                     HStack {
+                        
                         // Invisible Button for Layout Balancing
                         Button(action: {}) {
                             VStack {
@@ -85,21 +72,11 @@ struct ContentView: View {
                         .background(Color.clear)
                         .cornerRadius(50)
                         .hidden()
-                            
+                        
                         Spacer()
-                            
+                        
                         Button(action: {
-                            if let firstActivityName = activityNames.first {
-                                let activityData = viewModel.dataForActivity(named: firstActivityName)
-                                printActivityData(activityData)
-                                // Public getter
-                                do {
-                                    try workOutPlan.conditionalResetData()
-                                } catch {
-                                    let workOutPlan = WorkOutPlans.shared
-                                    workOutPlan.setEntries(activityData)
-                                }
-                            }; setupAndSendMessage()
+                            print("Start Pressed")
                         }) {
                             Text("START!")
                                 .foregroundColor(.white)
@@ -110,7 +87,7 @@ struct ContentView: View {
                                 .padding()
                         }
                         Spacer()
-                            
+                        
                         Button(action: {
                             activityNames.append("Activity \(activityNames.count + 1)")
                         }) {
@@ -129,44 +106,12 @@ struct ContentView: View {
             }
         }
     }
-        
     func deleteActivity(at offsets: IndexSet) {
         activityNames.remove(atOffsets: offsets)
     }
-    func printActivityData(_ data: ActivityData) {
-        for entry in data.entries {
-            print("Name \(entry.name): \(entry.minutes) minutes at \(entry.percentage)% intensity   id: \(entry.id)")
-        }
-    }
-    private func setupAndSendMessage() {
-        DispatchQueue.global(qos: .userInitiated).async {
-            connector.executeQuery("SELECT * FROM songs") { result in
-                switch result {
-                case .success(let rows):
-                    for row in rows {
-                        // Process each row
-                        print(row)
-                    }
-                case .failure(let error):
-                    print("Failed to execute query: \(error)")
-                }
-            }
-//            self.tcpClient.setupConnection(toHost: "36.226.83.161", port: 3306)
-//            self.tcpClient.sendMessage(message: "0.5:0.9")
-//            
-//            // Read the response from the server
-//            if let response = self.tcpClient.readResponse() {
-//                DispatchQueue.main.async {
-//                    // Print the response or update the UI here
-//                    print("Response from server: \(response)")
-//                }
-//            }
-//            
-//            self.tcpClient.stopConnection()
-        }
-    }
+        
 }
-    
+
 #Preview {
     ContentView()
 }
