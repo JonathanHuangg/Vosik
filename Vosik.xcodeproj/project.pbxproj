@@ -19,6 +19,9 @@
 		ABB36F312B78383E00139387 /* EditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F302B78383E00139387 /* EditPage.swift */; };
 		ABB36F332B78657100139387 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F322B78657100139387 /* MusicPlayer.swift */; };
 		ABB36F382B786BFF00139387 /* SO TIRED (Slowed).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F372B786BFF00139387 /* SO TIRED (Slowed).mp3 */; };
+		ABB36F3A2B786EA000139387 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F392B786EA000139387 /* PlayerModel.swift */; };
+		ABB36F3C2B78744600139387 /* compile.py in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F3B2B78744600139387 /* compile.py */; };
+		ABB36F3E2B7877EE00139387 /* TCP Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F3D2B7877EE00139387 /* TCP Socket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		ABB36F302B78383E00139387 /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
 		ABB36F322B78657100139387 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		ABB36F372B786BFF00139387 /* SO TIRED (Slowed).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SO TIRED (Slowed).mp3"; sourceTree = "<group>"; };
+		ABB36F392B786EA000139387 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		ABB36F3B2B78744600139387 /* compile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = compile.py; sourceTree = "<group>"; };
+		ABB36F3D2B7877EE00139387 /* TCP Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TCP Socket.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		ABB36EF42B77D43A00139387 = {
 			isa = PBXGroup;
 			children = (
+				ABB36F3D2B7877EE00139387 /* TCP Socket.swift */,
 				ABB36EFF2B77D43A00139387 /* Vosik */,
 				ABB36F102B77D43B00139387 /* VosikTests */,
 				ABB36F1A2B77D43B00139387 /* VosikUITests */,
@@ -144,8 +151,10 @@
 		ABB36F342B78659700139387 /* Music MP3 */ = {
 			isa = PBXGroup;
 			children = (
+				ABB36F3B2B78744600139387 /* compile.py */,
 				ABB36F372B786BFF00139387 /* SO TIRED (Slowed).mp3 */,
 				ABB36F322B78657100139387 /* MusicPlayer.swift */,
+				ABB36F392B786EA000139387 /* PlayerModel.swift */,
 			);
 			path = "Music MP3";
 			sourceTree = "<group>";
@@ -256,6 +265,7 @@
 			files = (
 				ABB36F382B786BFF00139387 /* SO TIRED (Slowed).mp3 in Resources */,
 				ABB36F082B77D43B00139387 /* Preview Assets.xcassets in Resources */,
+				ABB36F3C2B78744600139387 /* compile.py in Resources */,
 				ABB36F052B77D43B00139387 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,9 +294,11 @@
 				ABB36F2F2B78092C00139387 /* AddEntry.swift in Sources */,
 				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
 				ABB36F332B78657100139387 /* MusicPlayer.swift in Sources */,
+				ABB36F3E2B7877EE00139387 /* TCP Socket.swift in Sources */,
 				ABB36F012B77D43A00139387 /* VosikApp.swift in Sources */,
 				ABB36F312B78383E00139387 /* EditPage.swift in Sources */,
 				ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */,
+				ABB36F3A2B786EA000139387 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
