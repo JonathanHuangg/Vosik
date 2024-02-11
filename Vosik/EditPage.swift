@@ -11,6 +11,7 @@ import SwiftUI
 
 struct IntensityEntry: Identifiable {
     let id = UUID()
+    var name: String
     var minutes: Int
     var percentage: Int
 }
@@ -20,12 +21,17 @@ struct EditPage: View {
     // State array to store entries
     @State private var entries: [IntensityEntry] = []
     
+    @ObservedObject var data: ActivityData
     // For the wheel
     @State private var minutes: Int = 0
     @State private var percentage: Int = 10
     
+    var activityName: String // passed in from contentView
     // For going back to ContentView
     @Environment(\.presentationMode) var presentationMode
+    
+    // for keeping track of different copies
+    var activityIndex: Int
     
     let minuteSecondRange = Array(1...60)
     let percentageRange = Array(stride(from: 10, through: 100, by: 10))
@@ -84,8 +90,10 @@ struct EditPage: View {
                     
                     // Commit button
                     Button("Commit") {
-                        let newEntry = IntensityEntry(minutes: minutes, percentage: percentage)
+                        let newEntry = IntensityEntry(name: activityName, minutes: minutes, percentage: percentage)
+                        data.entries.append(newEntry)
                         entries.append(newEntry)
+                        printCurrentEntries()
                     }
                     .foregroundColor(.white)
                     .font(.title)
@@ -115,8 +123,23 @@ struct EditPage: View {
     func deleteEntry(at offsets: IndexSet) {
         entries.remove(atOffsets: offsets)
     }
+    
+    private func printCurrentEntries() {
+        for entry in entries {
+            print("Entry ID: \(entry.id), Minutes: \(entry.minutes), Percentage: \(entry.percentage)")
+        }
+    }
 }
 
-#Preview {
-    EditPage()
+struct EditPage_Previews: PreviewProvider {
+    static var previews: some View {
+        // Create a sample ActivityData with some mock entries
+        let sampleData = ActivityData(entries: [
+            IntensityEntry(name: "act1", minutes: 30, percentage: 70),
+            IntensityEntry(name: "act2", minutes: 30, percentage: 70),
+        ])
+        
+        // Now pass this sample data to the EditPage for the preview
+        EditPage(data: sampleData, activityName: "what", activityIndex: 0)
+    }
 }

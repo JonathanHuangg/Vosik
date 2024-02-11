@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View {  
     
     // @State private var activityName: String = "Running"
-    
     // This is used because you want to add multiple entries
     @State private var activityNames: [String] = ["Activity 1"]
     @State private var isEditing: Bool = false
     @State private var selectedActivityIndex: Int? = nil
     
+    // Track ActivityData
+    @StateObject private var viewModel = ActivitiesViewModel()
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [
                     Color(red: 5 / 255, green: 5 / 255, blue: 5 / 255), // Base dark color
@@ -45,21 +46,22 @@ struct ContentView: View {
                     }
                     .padding(.bottom, 20)
                     List {
-                        ForEach(activityNames.indices, id: \.self) { index in
-                            ActivityEntry(activityName: $activityNames[index], onEdit: {
-                                print("Edit for \(activityNames[index])")
-                            })
-                            .listRowBackground(Color.clear)
+                        ForEach(Array(activityNames.enumerated()), id: \.offset) { index, name in
+                            NavigationLink(destination: EditPage(data: viewModel.dataForActivity(named: name), activityName: name, activityIndex: index)) {
+                                ActivityEntry(activityName: .constant(name), onEdit: {
+                                    print("Edit for \(activityNames[index])")
+                                })
+                            }
+                            .padding()
+                            .listRowInsets(EdgeInsets()) // This will remove the default padding
+                            .listRowBackground(Color.clear) // This will make the background of the row clear
                         }
                         .onDelete(perform: deleteActivity)
                     }
                     .listStyle(PlainListStyle())
                     .background(Color.clear)
-                    
-                    Spacer()
-                    
-                    HStack {
                         
+                    HStack {
                         // Invisible Button for Layout Balancing
                         Button(action: {}) {
                             VStack {
@@ -72,11 +74,14 @@ struct ContentView: View {
                         .background(Color.clear)
                         .cornerRadius(50)
                         .hidden()
-                        
+                            
                         Spacer()
-                        
+                            
                         Button(action: {
-                            print("Start Pressed")
+                            if let firstActivityName = activityNames.first {
+                                let activityData = viewModel.dataForActivity(named: firstActivityName)
+                                printActivityData(activityData)
+                            }
                         }) {
                             Text("START!")
                                 .foregroundColor(.white)
@@ -87,7 +92,7 @@ struct ContentView: View {
                                 .padding()
                         }
                         Spacer()
-                        
+                            
                         Button(action: {
                             activityNames.append("Activity \(activityNames.count + 1)")
                         }) {
@@ -106,12 +111,17 @@ struct ContentView: View {
             }
         }
     }
+        
     func deleteActivity(at offsets: IndexSet) {
         activityNames.remove(atOffsets: offsets)
     }
-        
+    func printActivityData(_ data: ActivityData) {
+        for entry in data.entries {
+            print("Name \(entry.name): \(entry.minutes) minutes at \(entry.percentage)% intensity   id: \(entry.id)")
+        }
+    }
 }
-
+    
 #Preview {
     ContentView()
 }
