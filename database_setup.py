@@ -5,18 +5,19 @@ cnx = mysql.connector.connect(user='hacklytics',
 
 cursor = cnx.cursor()
 
-query = "INSERT INTO songs (id, song_name, intensity) VALUES (%s, %s, %s);"
+query = "INSERT INTO songs (id, song_name, intensity, duration_ms, track_href, album_image) VALUES (%s, %s, %s, %s, %s, %s);"
 
-data = open("energy.tsv", "r", encoding="utf-8")
+data = open("track_data.tsv", "r", encoding="utf-8")
 
 lines = data.readlines()
 
 for line in lines:
     parts = line.split("\t")
+    print(parts[0])
     id = parts[1]
     name = parts[2]
     intensity = float(parts[3])
-    cursor.execute(query, (id, name, intensity))
+    cursor.execute(query, (id, name, intensity, float(parts[4]), parts[5], parts[6]))
 
 cnx.commit()
 
