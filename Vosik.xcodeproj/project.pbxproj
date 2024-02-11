@@ -25,6 +25,8 @@
 		ABB36F3A2B786EA000139387 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F392B786EA000139387 /* PlayerModel.swift */; };
 		ABB36F3C2B78744600139387 /* compile.py in Resources */ = {isa = PBXBuildFile; fileRef = ABB36F3B2B78744600139387 /* compile.py */; };
 		ABB36F3E2B7877EE00139387 /* TCP Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F3D2B7877EE00139387 /* TCP Socket.swift */; };
+		ABB36F402B78A68E00139387 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F3F2B78A68E00139387 /* ActivityData.swift */; };
+		ABB36F422B78A70400139387 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36F412B78A70400139387 /* ActivitiesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		ABB36F392B786EA000139387 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		ABB36F3B2B78744600139387 /* compile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = compile.py; sourceTree = "<group>"; };
 		ABB36F3D2B7877EE00139387 /* TCP Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TCP Socket.swift"; sourceTree = "<group>"; };
+		ABB36F3F2B78A68E00139387 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
+		ABB36F412B78A70400139387 /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				ABB36F002B77D43A00139387 /* VosikApp.swift */,
 				ABB36F022B77D43A00139387 /* ContentView.swift */,
 				ABB36F302B78383E00139387 /* EditPage.swift */,
+				ABB36F3F2B78A68E00139387 /* ActivityData.swift */,
+				ABB36F412B78A70400139387 /* ActivitiesViewModel.swift */,
 				ABB36F2E2B78092C00139387 /* AddEntry.swift */,
 				ABB36F042B77D43B00139387 /* Assets.xcassets */,
 				ABB36F062B77D43B00139387 /* Preview Content */,
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA7C7DA2B78C7CB008FE805 /* ViewController.swift in Sources */,
+				ABB36F402B78A68E00139387 /* ActivityData.swift in Sources */,
 				ABB36F2F2B78092C00139387 /* AddEntry.swift in Sources */,
 				ABB36F032B77D43A00139387 /* ContentView.swift in Sources */,
 				ABB36F332B78657100139387 /* MusicPlayer.swift in Sources */,
@@ -318,6 +325,7 @@
 				ABB36F2D2B77DFB200139387 /* ActivityEntry.swift in Sources */,
 				ABB36F3A2B786EA000139387 /* PlayerModel.swift in Sources */,
 				4BA7C7D82B78C779008FE805 /* Constants.swift in Sources */,
+				ABB36F422B78A70400139387 /* ActivitiesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
