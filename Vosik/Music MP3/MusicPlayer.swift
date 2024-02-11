@@ -13,7 +13,9 @@ extension TimeInterval {
 
 struct MusicPlayer: View {
     @ObservedObject var musicPlayer: PlayerModel
-
+    
+    @StateObject private var viewModel = ActivitiesViewModel()
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [

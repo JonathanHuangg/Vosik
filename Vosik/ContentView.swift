@@ -17,6 +17,17 @@ struct ContentView: View {
     
     // Track ActivityData
     @StateObject private var viewModel = ActivitiesViewModel()
+    
+    
+    let connector = MySQLDatabaseConnector(
+        hostname: "36.226.83.161",
+        port: 3306,
+        username: "henry",
+        password: "Aa&10220305",
+        database: "Vosik"
+    )
+
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -81,7 +92,14 @@ struct ContentView: View {
                             if let firstActivityName = activityNames.first {
                                 let activityData = viewModel.dataForActivity(named: firstActivityName)
                                 printActivityData(activityData)
-                            }
+                                // Public getter
+                                do {
+                                    try workOutPlan.conditionalResetData()
+                                } catch {
+                                    let workOutPlan = WorkOutPlans.shared
+                                    workOutPlan.setEntries(activityData)
+                                }
+                            }; setupAndSendMessage()
                         }) {
                             Text("START!")
                                 .foregroundColor(.white)
@@ -118,6 +136,33 @@ struct ContentView: View {
     func printActivityData(_ data: ActivityData) {
         for entry in data.entries {
             print("Name \(entry.name): \(entry.minutes) minutes at \(entry.percentage)% intensity   id: \(entry.id)")
+        }
+    }
+    private func setupAndSendMessage() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            connector.executeQuery("SELECT * FROM songs") { result in
+                switch result {
+                case .success(let rows):
+                    for row in rows {
+                        // Process each row
+                        print(row)
+                    }
+                case .failure(let error):
+                    print("Failed to execute query: \(error)")
+                }
+            }
+//            self.tcpClient.setupConnection(toHost: "36.226.83.161", port: 3306)
+//            self.tcpClient.sendMessage(message: "0.5:0.9")
+//            
+//            // Read the response from the server
+//            if let response = self.tcpClient.readResponse() {
+//                DispatchQueue.main.async {
+//                    // Print the response or update the UI here
+//                    print("Response from server: \(response)")
+//                }
+//            }
+//            
+//            self.tcpClient.stopConnection()
         }
     }
 }
